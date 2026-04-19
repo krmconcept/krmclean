@@ -29,7 +29,7 @@ const SERVICES = [
   {
     icon: Sofa,
     title: 'Canapés',
-    desc: 'Nettoyage en profondeur de tous types de canapés : tissu, microfibre, velours, cuir. Élimination des taches, odeurs et allergènes.',
+    desc: 'Nettoyage en profondeur de tous types de canapés : tissu, microfibre, velours. Élimination des taches, odeurs et allergènes.',
     to: '/textile#canape',
   },
   {
@@ -47,10 +47,11 @@ const SERVICES = [
 ]
 
 const STEPS = [
-  { num: '01', title: 'Pré-traitement', desc: 'Application d\'un détergent professionnel sur les zones traitées. Temps d\'action 5 à 10 minutes.' },
-  { num: '02', title: 'Injection', desc: 'Injection d\'eau chaude à haute pression dans les fibres du tissu pour déloger les impuretés.' },
-  { num: '03', title: 'Extraction', desc: 'Aspiration simultanée de l\'eau chargée de salissures. 95% de l\'humidité éliminée.' },
-  { num: '04', title: 'Séchage', desc: 'Le textile est sec en 2 à 4 heures selon les conditions. Aucune odeur résiduelle.' },
+  { num: '01', title: 'Pulvérisation détachante', desc: 'Application du produit Koch Chemie Pol Star sur les zones à traiter. Temps d\'action : 5 à 10 minutes pour décomposer les salissures incrustées.' },
+  { num: '02', title: 'Brossage mécanique', desc: 'Brossage des fibres pour faire pénétrer le détergent en profondeur et décoller les particules enkystées.' },
+  { num: '03', title: 'Vapeur haute température', desc: 'Passage vapeur pour dilater les fibres et décrocher les résidus tenaces. Agit également comme traitement anti-acariens.' },
+  { num: '04', title: 'Injection-Extraction Kärcher', desc: 'La machine Kärcher injecte et aspire simultanément. 95 % de l\'humidité est extraite en temps réel.' },
+  { num: '05', title: 'Désodorisation', desc: 'Traitement final pour éliminer les odeurs résiduelles. Le textile est sec en 2 à 4 heures.' },
 ]
 
 const AVANTAGES = [
@@ -58,7 +59,7 @@ const AVANTAGES = [
   'Machines professionnelles Kärcher',
   'Intervention chez vous sans déplacer le meuble',
   'Résultat visible et mesurable immédiatement',
-  'Produits certifiés, sans traces après séchage',
+  'Koch Chemie Pol Star, sans traces après séchage',
   'Devis gratuit sur photo WhatsApp',
 ]
 
@@ -102,7 +103,7 @@ export default function Home() {
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to right, rgba(8,10,12,0.97) 0%, rgba(8,10,12,0.75) 55%, rgba(8,10,12,0.2) 100%)',
+            background: 'linear-gradient(to right, rgba(8,10,12,0.97) 40%, rgba(8,10,12,0.82) 70%, rgba(8,10,12,0.4) 100%)',
             zIndex: 1,
           }}
         />
@@ -142,7 +143,7 @@ export default function Home() {
               {...fadeUp(0.2)}
               style={{
                 fontSize: '1rem',
-                color: 'var(--brume)',
+                color: 'rgba(232,238,242,0.85)',
                 lineHeight: 1.7,
                 maxWidth: '420px',
                 marginBottom: '2.5rem',
@@ -538,7 +539,7 @@ export default function Home() {
               onMouseLeave={e => e.currentTarget.style.background = 'var(--acier-prof)'}
             >
               <Phone size={14} />
-              +32 483 44 06 69
+              <span style={{ whiteSpace: 'nowrap' }}>+32 483 44 06 69</span>
             </a>
             <a
               href="https://wa.me/32483440669"

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle2, ChevronRight, Shield, Wind, Sparkles, Star } from 'lucide-react'
+import { CheckCircle2, ChevronRight, Shield, Wind, Sparkles, Settings2 } from 'lucide-react'
 
 const EASE = [0.22, 1, 0.36, 1]
 const inView = (delay = 0) => ({
@@ -16,7 +16,7 @@ const SERVICES = [
     id: 'canape',
     label: 'Service #01',
     title: 'Canapés',
-    subtitle: 'Tissu · Microfibre · Velours · Cuir',
+    subtitle: 'Tissu · Microfibre · Velours · Lin',
     desc: 'Notre service de nettoyage de canapés élimine les taches tenaces, les odeurs et les allergènes accumulés dans les fibres. La technologie injection-extraction agit en profondeur sans endommager les matières.',
     benefits: [
       'Élimination des taches même anciennes',
@@ -26,11 +26,10 @@ const SERVICES = [
       'Résultat visible immédiatement',
     ],
     tarifs: [
-      { type: '2 places', prix: '45 €' },
-      { type: '3 places', prix: '60 €' },
-      { type: '4 places', prix: '75 €' },
-      { type: 'Canapé d\'angle', prix: '80–100 €' },
-      { type: 'Fauteuil', prix: '30 €' },
+      { type: 'Siège seul', prix: '39 €' },
+      { type: '2 à 3 places', prix: '79 €' },
+      { type: '4 à 5 places', prix: '99 €' },
+      { type: 'Grand format (angle, XXL)', prix: '129 €' },
     ],
   },
   {
@@ -41,16 +40,15 @@ const SERVICES = [
     desc: 'Votre matelas accueille des millions d\'acariens sans que vous le sachiez. Notre traitement injection-extraction assainit en profondeur et restaure l\'hygiène de votre literie pour un sommeil sain.',
     benefits: [
       'Élimination 99% des acariens',
-      'Traitement anti-allergènes certifié',
+      'Traitement anti-allergènes professionnel',
       'Déodorisation et assainissement complets',
       'Séchage en 3–5 heures',
       'Recommandé tous les 6–12 mois',
     ],
     tarifs: [
-      { type: '1 place (90×200)', prix: '40 €' },
-      { type: '2 places (140×200)', prix: '55 €' },
-      { type: 'Queen (160×200)', prix: '60 €' },
-      { type: 'King (180×200)', prix: '70 €' },
+      { type: '1 place', prix: '59 €' },
+      { type: 'Queen size (140–160 cm)', prix: '79 €' },
+      { type: 'King size (180–200 cm)', prix: '99 €' },
     ],
   },
   {
@@ -67,10 +65,9 @@ const SERVICES = [
       'Grande surface : tarif dégressif',
     ],
     tarifs: [
-      { type: 'Jusqu\'à 4 m²', prix: '30 €' },
-      { type: '4–8 m²', prix: '40–55 €' },
-      { type: '8–15 m²', prix: '60–80 €' },
-      { type: 'Sur mesure > 15 m²', prix: 'Devis' },
+      { type: 'Petit (60×90 / 110 cm)', prix: '39 €' },
+      { type: 'Moyen (120×170 / 160×230 cm)', prix: '59 €' },
+      { type: 'Grand (200×290 / 250×350 cm)', prix: '79 €' },
     ],
   },
 ]
@@ -78,8 +75,8 @@ const SERVICES = [
 const GARANTIES = [
   { icon: Shield, title: 'Satisfaction garantie', desc: 'Résultat non satisfaisant ? Nous revenons sans frais supplémentaires.' },
   { icon: Wind, title: 'Séchage rapide', desc: 'Vos textiles sont secs en 2 à 4 heures. Pas de journée bloquée.' },
-  { icon: Sparkles, title: 'Produits certifiés', desc: 'Détergents professionnels sans solvants. Aucune trace après séchage.' },
-  { icon: Star, title: 'Machines pro Kärcher', desc: 'Équipement professionnel de haute pression pour des résultats supérieurs.' },
+  { icon: Sparkles, title: 'Koch Chemie Pol Star', desc: 'Détergent professionnel Koch Chemie Pol Star. Sans solvant, aucune trace après séchage.' },
+  { icon: Settings2, title: 'Machines pro Kärcher', desc: 'Équipement professionnel de haute pression pour des résultats supérieurs.' },
 ]
 
 export default function TextilePage() {

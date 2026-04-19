@@ -141,7 +141,7 @@ export default function Reservation() {
                 <a
                   href="tel:+32483440669"
                   className="price-num"
-                  style={{ fontSize: '1.8rem', letterSpacing: '0.02em' }}
+                  style={{ fontSize: '1.8rem', letterSpacing: '0.02em', whiteSpace: 'nowrap' }}
                 >
                   +32 483 44 06 69
                 </a>
@@ -187,7 +187,7 @@ export default function Reservation() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="price-num"
-                  style={{ fontSize: '1.8rem', letterSpacing: '0.02em', color: '#25d366' }}
+                  style={{ fontSize: '1.8rem', letterSpacing: '0.02em', color: '#25d366', whiteSpace: 'nowrap' }}
                 >
                   +32 483 44 06 69
                 </a>

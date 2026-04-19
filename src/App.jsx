@@ -8,7 +8,6 @@ import { useAnalytics } from './hooks/useAnalytics'
 
 import Home from './pages/Home'
 import TextilePage from './pages/TextilePage'
-import AutoPage from './pages/AutoPage'
 import Tarifs from './pages/Tarifs'
 import Procede from './pages/Procede'
 import Reservation from './pages/Reservation'
@@ -28,7 +27,6 @@ function AppInner() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/textile" element={<TextilePage />} />
-          <Route path="/auto" element={<AutoPage />} />
           <Route path="/tarifs" element={<Tarifs />} />
           <Route path="/procede" element={<Procede />} />
           <Route path="/reservation" element={<Reservation />} />

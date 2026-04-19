@@ -15,60 +15,51 @@ const TABLES = [
   {
     title: 'Canapés',
     rows: [
-      { type: '2 places', prix: '45 €' },
-      { type: '3 places', prix: '60 €' },
-      { type: '4 places', prix: '75 €' },
-      { type: 'Canapé d\'angle', prix: '80–100 €' },
-      { type: 'Fauteuil', prix: '30 €' },
-      { type: 'Pouf / Ottoman', prix: '20 €' },
+      { type: 'Siège seul', prix: '39 €' },
+      { type: '2 à 3 places', prix: '79 €' },
+      { type: '4 à 5 places', prix: '99 €' },
+      { type: 'Grand format (angle, XXL)', prix: '129 €' },
     ],
   },
   {
     title: 'Matelas',
     rows: [
-      { type: '1 place (90×200)', prix: '40 €' },
-      { type: '2 places (140×200)', prix: '55 €' },
-      { type: 'Queen (160×200)', prix: '60 €' },
-      { type: 'King (180×200)', prix: '70 €' },
-      { type: 'Traversin', prix: '15 €' },
+      { type: '1 place', prix: '59 €' },
+      { type: 'Queen size (140–160 cm)', prix: '79 €' },
+      { type: 'King size (180–200 cm)', prix: '99 €' },
     ],
   },
   {
     title: 'Tapis',
     rows: [
-      { type: 'Jusqu\'à 4 m²', prix: '30 €' },
-      { type: '4 à 8 m²', prix: '40–55 €' },
-      { type: '8 à 15 m²', prix: '60–80 €' },
-      { type: '> 15 m²', prix: 'Devis' },
-      { type: 'Tapis de bain (paire)', prix: '20 €' },
+      { type: 'Petit (60×90 / 110 cm)', prix: '39 €' },
+      { type: 'Moyen (120×170 / 160×230 cm)', prix: '59 €' },
+      { type: 'Grand (200×290 / 250×350 cm)', prix: '79 €' },
     ],
   },
 ]
 
 const SUPPLEMENTS = [
-  { label: 'Taches très incrustées (café, vin, sang…)', prix: '+ 10 €' },
-  { label: 'Protection anti-taches Teflon', prix: '+ 15 €' },
-  { label: 'Traitement anti-acariens renforcé', prix: '+ 10 €' },
-  { label: 'Déodorisation spéciale (tabac, animal)', prix: '+ 10 €' },
-  { label: 'Déplacement > 15 km (par km supplémentaire)', prix: '+ 1 €/km' },
+  { label: 'Poils d\'animaux', prix: '+15 €' },
+  { label: 'Déplacement hors zone (> 15 km)', prix: '+25 €' },
 ]
 
 const PACKS = [
   {
-    name: 'Pack Salon',
-    badge: 'ÉCONOMIE',
-    reduction: '-15%',
-    contenu: 'Canapé 3 places + 1 fauteuil + tapis jusqu\'à 6 m²',
-    original: '120 €',
-    pack: '100 €',
+    name: 'Pack Salon Propre',
+    badge: 'PROMO',
+    reduction: '-50%',
+    contenuBold: 'Un canapé',
+    contenuSuite: 'nettoyé, le reste à',
+    contenuAccent: '-50%',
   },
   {
-    name: 'Pack Chambre',
-    badge: 'ÉCONOMIE',
-    reduction: '-15%',
-    contenu: 'Matelas 2 places + 2 oreillers + tapis de chevet',
-    original: '85 €',
-    pack: '72 €',
+    name: 'Pack Chambre Saine',
+    badge: 'PROMO',
+    reduction: '-50%',
+    contenuBold: 'Un matelas',
+    contenuSuite: 'nettoyé, le reste à',
+    contenuAccent: '-50%',
   },
 ]
 
@@ -261,13 +252,11 @@ export default function Tarifs() {
                 >
                   {pack.reduction}
                 </div>
-                <p style={{ fontSize: '0.82rem', color: 'var(--brume)', lineHeight: 1.7 }}>{pack.contenu}</p>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid var(--ardoise)' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--brume)', textDecoration: 'line-through', fontFamily: "'Geist Mono', monospace" }}>
-                    {pack.original}
-                  </span>
-                  <span className="price-num" style={{ fontSize: '1.5rem' }}>{pack.pack}</span>
-                </div>
+                <p style={{ fontSize: '0.9rem', color: 'var(--creme)', lineHeight: 1.7 }}>
+                  <span style={{ color: 'var(--acier)' }}>{pack.contenuBold}</span>
+                  {' '}{pack.contenuSuite}{' '}
+                  <span style={{ color: 'var(--accent)' }}>{pack.contenuAccent}</span>
+                </p>
               </motion.div>
             ))}
           </div>

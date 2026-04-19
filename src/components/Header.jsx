@@ -5,7 +5,6 @@ import { Menu, X, Phone } from 'lucide-react'
 const NAV = [
   { to: '/', label: 'Accueil' },
   { to: '/textile', label: 'Textile' },
-  { to: '/auto', label: 'Auto' },
   { to: '/tarifs', label: 'Tarifs' },
   { to: '/procede', label: 'Procédé' },
   { to: '/faq', label: 'FAQ' },

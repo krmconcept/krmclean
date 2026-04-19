@@ -25,11 +25,11 @@ const QUESTIONS = [
   },
   {
     q: 'Intervenez-vous sur tous les types de tissu ?',
-    r: 'Nous intervenons sur la majorité des tissus : microfibre, velours, coton, polyester, laine, lin. Pour le cuir, nous proposons un nettoyage adapté. Certains tissus très délicats (soie pure, velours coupé luxe) peuvent nécessiter une vérification préalable — envoyez-nous une photo pour confirmation.',
+    r: 'Nous intervenons sur la majorité des tissus : microfibre, velours, coton, polyester, laine, lin. Nous n\'intervenons pas sur le cuir. Certains tissus très délicats (soie pure, velours coupé luxe) peuvent nécessiter une vérification préalable — envoyez-nous une photo pour confirmation.',
   },
   {
     q: 'Les produits utilisés sont-ils sans danger pour mes enfants et animaux ?',
-    r: 'Oui. Nos détergents professionnels sont certifiés et ne laissent aucune trace ni résidu toxique après séchage. Ils sont sans solvants chimiques agressifs. Nous recommandons de laisser le textile sécher complètement avant d\'y permettre l\'accès aux enfants en bas âge et aux animaux (2 à 3 heures).',
+    r: 'Oui. Nous utilisons le Koch Chemie Pol Star, un détergent professionnel sans solvants chimiques agressifs, qui ne laisse aucune trace ni résidu toxique après séchage. Nous recommandons de laisser le textile sécher complètement avant d\'y permettre l\'accès aux enfants en bas âge et aux animaux (2 à 3 heures).',
   },
   {
     q: 'Quelle est la zone d\'intervention ?',
