@@ -114,7 +114,7 @@ export default function About() {
             <motion.div {...inView(0.15)}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--ardoise)' }}>
                 {[
-                  { num: '500+', label: 'Interventions réalisées' },
+                  { num: 'Bruxelles', label: 'Zone d\'intervention' },
                   { num: '15 km', label: 'Rayon d\'intervention' },
                   { num: '48h', label: 'Délai moyen de réponse' },
                   { num: '100%', label: 'Clients satisfaits' },

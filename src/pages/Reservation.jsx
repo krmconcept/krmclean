@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet-async'
-import { Phone, MessageSquare, Clock, CheckCircle2, Camera } from 'lucide-react'
+import { Phone, MessageSquare, CheckCircle2, Camera } from 'lucide-react'
 
 const EASE = [0.22, 1, 0.36, 1]
 const inView = (delay = 0) => ({
@@ -19,11 +19,6 @@ const AVANTAGES = [
   'Déplacement inclus dans un rayon de 15 km',
 ]
 
-const HORAIRES = [
-  { jour: 'Lundi – Vendredi', heures: '08h00 – 19h00' },
-  { jour: 'Samedi', heures: '09h00 – 17h00' },
-  { jour: 'Dimanche', heures: 'Sur demande' },
-]
 
 export default function Reservation() {
   return (
@@ -87,29 +82,6 @@ export default function Reservation() {
               ))}
             </div>
 
-            <div>
-              <p className="label-tag" style={{ marginBottom: '1rem' }}>Horaires d'intervention</p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-                {HORAIRES.map((h, i) => (
-                  <div
-                    key={h.jour}
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      padding: '0.8rem 0',
-                      borderBottom: i < HORAIRES.length - 1 ? '1px solid var(--ardoise)' : 'none',
-                    }}
-                  >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <Clock size={13} color="var(--brume)" />
-                      <span style={{ fontSize: '0.82rem', color: 'var(--creme)' }}>{h.jour}</span>
-                    </div>
-                    <span className="price-num" style={{ fontSize: '0.85rem', color: 'var(--acier)' }}>{h.heures}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           {/* Droite — canaux de contact */}

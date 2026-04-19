@@ -59,7 +59,7 @@ export default function Header() {
             <img
               src="https://horizons-cdn.hostinger.com/fc364a02-ba23-45e9-8059-13906bf6f73a/adobe-express---file-2-cohdT.png"
               alt="KRM Clean"
-              style={{ height: '36px', width: 'auto', display: 'block' }}
+              style={{ height: '44px', width: 'auto', display: 'block' }}
             />
           </Link>
 
@@ -178,7 +178,7 @@ export default function Header() {
           <img
             src="https://horizons-cdn.hostinger.com/fc364a02-ba23-45e9-8059-13906bf6f73a/adobe-express---file-2-cohdT.png"
             alt="KRM Clean"
-            style={{ height: '30px', width: 'auto' }}
+            style={{ height: '38px', width: 'auto' }}
           />
           <button
             onClick={() => setOpen(false)}

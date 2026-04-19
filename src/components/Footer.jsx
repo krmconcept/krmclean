@@ -27,7 +27,7 @@ export default function Footer() {
           <img
             src="https://horizons-cdn.hostinger.com/fc364a02-ba23-45e9-8059-13906bf6f73a/adobe-express---file-2-cohdT.png"
             alt="KRM Clean"
-            style={{ height: '28px', width: 'auto', display: 'block', objectFit: 'contain', maxWidth: '160px' }}
+            style={{ height: '40px', width: 'auto', display: 'block', objectFit: 'contain', maxWidth: '200px' }}
           />
           <p style={{ fontSize: '0.8rem', color: 'var(--brume)', lineHeight: 1.7, maxWidth: '240px' }}>
             Service de nettoyage textile professionnel à domicile à Bruxelles et périphérie.
@@ -170,16 +170,24 @@ export default function Footer() {
           <p className="label-tag" style={{ opacity: 0.4, fontSize: '0.6rem' }}>
             © {year} KRM Clean — Tous droits réservés
           </p>
-          <a
-            href="https://krmconcept.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ fontSize: '0.6rem', color: 'var(--brume)', opacity: 0.4, transition: 'opacity 0.2s' }}
-            onMouseEnter={e => e.currentTarget.style.opacity = '0.8'}
-            onMouseLeave={e => e.currentTarget.style.opacity = '0.4'}
-          >
-            Site créé par KRM Concept
-          </a>
+          <p style={{ fontSize: '0.65rem', color: 'var(--brume)', opacity: 0.5 }}>
+            Site créé par{' '}
+            <a
+              href="https://www.krmconcept.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: 'var(--accent)',
+                textDecoration: 'none',
+                fontWeight: 500,
+                transition: 'opacity 0.2s',
+              }}
+              onMouseEnter={e => e.currentTarget.style.opacity = '0.75'}
+              onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+            >
+              KRM Concept
+            </a>
+          </p>
         </div>
         <div style={{ display: 'flex', gap: '1.5rem' }}>
           {[
