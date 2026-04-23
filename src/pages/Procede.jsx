@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet-async'
-import { Droplets, Wind, Flame } from 'lucide-react'
+import { Droplets, Brush, Thermometer, Wind, Star, ShieldCheck, Wrench } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const EASE = [0.22, 1, 0.36, 1]
@@ -14,51 +14,33 @@ const inView = (delay = 0) => ({
 const STEPS = [
   {
     num: '01',
-    title: 'Diagnostic & Pré-traitement',
-    desc: 'Nous évaluons le type de tissu, identifions les taches et zones à traiter. Un détergent professionnel adapté est appliqué et laissé agir 5 à 10 minutes pour décomposer les salissures incrustées.',
-    side: 'left',
+    icon: Droplets,
+    title: 'Pulvérisation du produit détachant',
+    desc: "Application d'un produit alcalin professionnel spécial textile. Il pénètre les fibres pour déloger la saleté et les taches tenaces du canapé ou matelas.",
   },
   {
     num: '02',
-    title: 'Injection eau chaude',
-    desc: 'Notre machine Kärcher professionnel injecte de l\'eau chaude sous pression contrôlée dans les fibres du tissu. La chaleur et la pression délogent les particules de saleté jusqu\'en profondeur.',
-    side: 'right',
+    icon: Brush,
+    title: 'Brossage mécanique des fibres',
+    desc: "Action mécanique pour faire agir le produit en profondeur, désincruster la poussière et détacher les impuretés sans abîmer les tissus.",
   },
   {
     num: '03',
-    title: 'Extraction simultanée',
-    desc: 'Simultanément à l\'injection, le système aspire l\'eau chargée de salissures. Cette double action — injection + aspiration — élimine 95% de l\'humidité en temps réel, évitant l\'engorgement des fibres.',
-    side: 'left',
+    icon: Thermometer,
+    title: 'Traitement vapeur haute température',
+    desc: "Injection de vapeur sèche pour une désinfection thermique complète, détruisant 99% des acariens et bactéries.",
   },
   {
     num: '04',
-    title: 'Finitions & contrôle',
-    desc: 'Passage final pour homogénéiser le résultat, brossage des fibres et vérification visuelle. Chaque zone traitée est contrôlée avant de quitter votre domicile.',
-    side: 'right',
+    icon: Wind,
+    title: 'Injection-Extraction (Shampouineuse)',
+    desc: "Rinçage des fibres et aspiration puissante de l'eau sale via notre machine Kärcher professionnelle. Garantit un séchage rapide.",
   },
   {
     num: '05',
-    title: 'Séchage rapide',
-    desc: 'Grâce au taux d\'extraction élevé, vos textiles sont complètement secs en 2 à 4 heures selon les conditions (type de tissu, épaisseur, ventilation). Aucune odeur résiduelle.',
-    side: 'left',
-  },
-]
-
-const MACHINES = [
-  {
-    icon: Droplets,
-    title: 'Module Injection',
-    desc: 'Pompe haute pression Kärcher. Eau chaude à 60°C pour une action détachante maximale sans abîmer les fibres.',
-  },
-  {
-    icon: Wind,
-    title: 'Module Extraction',
-    desc: 'Turbine d\'aspiration professionnelle. Récupère 95% de l\'eau injectée pour un séchage ultra-rapide.',
-  },
-  {
-    icon: Flame,
-    title: 'Vapeur optionnelle',
-    desc: 'Disponible en complément pour les taches particulièrement tenaces ou les traitements anti-acariens renforcés.',
+    icon: Star,
+    title: 'Désodorisation et parfum',
+    desc: "Finition avec un neutralisateur d'odeurs professionnel laissant un parfum frais de propreté dans votre maison.",
   },
 ]
 
@@ -66,9 +48,9 @@ export default function Procede() {
   return (
     <>
       <Helmet>
-        <title>Notre Procédé d'Injection-Extraction | KRM Clean Bruxelles</title>
-        <meta name="description" content="Découvrez le procédé d'injection-extraction professionnelle utilisé par KRM Clean pour le nettoyage de canapés, matelas et tapis à Bruxelles." />
-        <link rel="canonical" href="https://krmclean.be/procede" />
+        <title>Notre Procédé de Nettoyage en 5 Étapes | KRM Clean Bruxelles</title>
+        <meta name="description" content="Découvrez notre technologie de nettoyage en 5 étapes pour un résultat impeccable sur tous vos textiles d'ameublement à Bruxelles." />
+        <link rel="canonical" href="https://krmclean.com/procede" />
       </Helmet>
 
       {/* Hero */}
@@ -91,148 +73,137 @@ export default function Procede() {
             style={{ fontSize: 'clamp(2.5rem, 5vw, 5rem)', marginBottom: '1.5rem' }}
           >
             Notre procédé<br />
-            <span style={{ color: 'var(--acier)' }}>d'injection-extraction</span>
+            <span style={{ color: 'var(--acier)' }}>en 5 étapes</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease: EASE, delay: 0.2 }}
-            style={{ fontSize: '0.95rem', color: 'var(--brume)', maxWidth: '520px', lineHeight: 1.7 }}
+            style={{ fontSize: '0.95rem', color: 'var(--brume)', maxWidth: '600px', lineHeight: 1.7 }}
           >
-            La technique d'injection-extraction est la méthode de référence dans le nettoyage textile professionnel. Elle combine action chimique, chaleur et aspiration pour des résultats impossibles à obtenir avec un simple nettoyage en surface.
+            <span style={{ color: '#ee0055', fontWeight: 600 }}>
+              Une technologie de nettoyage en 5 étapes pour garantir un résultat impeccable sur tous vos textiles d&apos;ameublement.
+            </span>
           </motion.p>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section style={{ padding: '6rem 2rem', borderBottom: '1px solid var(--ardoise)' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
-          {/* Central line */}
-          <div
-            style={{
-              position: 'absolute',
-              left: '50%',
-              top: 0,
-              bottom: 0,
-              width: '1px',
-              background: 'var(--ardoise)',
-              transform: 'translateX(-50%)',
-              zIndex: 0,
-            }}
-            className="timeline-line"
-          />
-
-          {STEPS.map((step, i) => (
-            <motion.div
-              key={step.num}
-              {...inView(i * 0.1)}
-              style={{
-                display: 'flex',
-                justifyContent: step.side === 'left' ? 'flex-start' : 'flex-end',
-                marginBottom: '3rem',
-                position: 'relative',
-                zIndex: 1,
-              }}
-              className="timeline-step"
-            >
-              <div
-                className="card-zinc"
+      {/* 5 Steps */}
+      <section style={{ padding: '4rem 2rem', borderBottom: '1px solid var(--ardoise)' }}>
+        <div style={{ maxWidth: '860px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+          {STEPS.map((step, i) => {
+            const Icon = step.icon
+            return (
+              <motion.div
+                key={step.num}
+                {...inView(i * 0.1)}
                 style={{
-                  width: '44%',
-                  borderLeft: step.side === 'left' ? '2px solid var(--acier-mid)' : '1px solid var(--ardoise)',
-                  borderRight: step.side === 'right' ? '2px solid var(--acier-mid)' : '1px solid var(--ardoise)',
-                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '1.25rem',
+                  background: 'var(--zinc)',
+                  border: '1px solid var(--ardoise)',
+                  borderRadius: '0.5rem',
+                  padding: '1.5rem',
                 }}
-                className="timeline-card"
               >
-                <div
-                  className="price-num"
-                  style={{
-                    fontSize: '3.5rem',
-                    lineHeight: 1,
-                    color: 'var(--acier-mid)',
-                    opacity: 0.18,
-                    position: 'absolute',
-                    top: '1rem',
-                    right: '1rem',
-                    userSelect: 'none',
-                  }}
-                >
-                  {step.num}
-                </div>
-                <h3 style={{
-                  fontFamily: "'Barlow Condensed', sans-serif",
-                  fontWeight: 700,
-                  fontSize: '1.2rem',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.04em',
-                  color: 'var(--blanc)',
-                  marginBottom: '0.75rem',
+                <div style={{
+                  flexShrink: 0,
+                  width: '52px',
+                  height: '52px',
+                  borderRadius: '0.5rem',
+                  background: 'linear-gradient(135deg, #1a6b8a, #2da0c0)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}>
-                  {step.title}
-                </h3>
-                <p style={{ fontSize: '0.85rem', color: 'var(--brume)', lineHeight: 1.7 }}>{step.desc}</p>
-              </div>
-            </motion.div>
-          ))}
+                  <Icon size={24} color="#fff" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 style={{
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontWeight: 700,
+                    fontSize: '1.1rem',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.04em',
+                    color: 'var(--blanc)',
+                    marginBottom: '0.5rem',
+                  }}>
+                    <span style={{ color: 'var(--acier)', marginRight: '0.5rem' }}>{step.num}</span>
+                    {step.title}
+                  </h3>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--brume)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
+                </div>
+              </motion.div>
+            )
+          })}
         </div>
-        <style>{`
-          @media (max-width: 640px) {
-            .timeline-line { display: none !important; }
-            .timeline-step { justify-content: flex-start !important; }
-            .timeline-card { width: 100% !important; border-left: 2px solid var(--acier-mid) !important; border-right: 1px solid var(--ardoise) !important; }
-          }
-        `}</style>
       </section>
 
-      {/* Matériel */}
-      <section style={{ padding: '6rem 2rem', background: 'var(--charbon)', borderBottom: '1px solid var(--ardoise)' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <motion.div {...inView()} style={{ marginBottom: '3rem' }}>
-            <span className="red-rule" />
-            <span className="label-tag" style={{ display: 'block', marginBottom: '0.75rem' }}>Notre équipement</span>
-            <h2 className="display-heading" style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)' }}>
-              Machines Kärcher<br />professionnelles
-            </h2>
-          </motion.div>
+      {/* Technologie et Garantie Qualité */}
+      <section style={{ padding: '5rem 2rem', background: 'var(--zinc)', borderBottom: '1px solid var(--ardoise)' }}>
+        <div style={{ maxWidth: '860px', margin: '0 auto' }}>
+          <motion.h2
+            {...inView()}
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 700,
+              fontSize: 'clamp(1.8rem, 3vw, 2.5rem)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.04em',
+              color: 'var(--blanc)',
+              textAlign: 'center',
+              marginBottom: '3rem',
+            }}
+          >
+            Technologie et Garantie Qualité
+          </motion.h2>
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '1px',
-              background: 'var(--ardoise)',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '2rem',
             }}
-            className="machines-grid"
+            className="guarantee-grid"
           >
-            {MACHINES.map((m, i) => {
-              const Icon = m.icon
-              return (
-                <motion.div
-                  key={m.title}
-                  {...inView(i * 0.1)}
-                  style={{
-                    background: 'var(--zinc)',
-                    padding: '2.5rem 2rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '1rem',
-                  }}
-                >
-                  <Icon size={28} color="var(--acier)" strokeWidth={1.5} />
-                  <h4 style={{
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontWeight: 700,
-                    fontSize: '1.2rem',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.03em',
-                    color: 'var(--blanc)',
-                  }}>
-                    {m.title}
-                  </h4>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--brume)', lineHeight: 1.7 }}>{m.desc}</p>
-                </motion.div>
-              )
-            })}
+            <motion.div {...inView(0.1)}>
+              <h3 style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 700,
+                fontSize: '1.1rem',
+                textTransform: 'uppercase',
+                color: 'var(--acier)',
+                marginBottom: '0.75rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+              }}>
+                <Wrench size={18} color="var(--acier)" strokeWidth={1.5} />
+                Matériel d&apos;Expert (Kärcher)
+              </h3>
+              <p style={{ fontSize: '0.85rem', color: 'var(--brume)', lineHeight: 1.8 }}>
+                Nous investissons dans des machines professionnelles comme le Kärcher Puzzi 8/1 pour l&apos;injection-extraction. Cette puissance d&apos;aspiration garantit l&apos;extraction totale des résidus de saleté et un séchage rapide, évitant les mauvaises odeurs d&apos;humidité.
+              </p>
+            </motion.div>
+            <motion.div {...inView(0.2)}>
+              <h3 style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 700,
+                fontSize: '1.1rem',
+                textTransform: 'uppercase',
+                color: 'var(--acier)',
+                marginBottom: '0.75rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+              }}>
+                <ShieldCheck size={18} color="var(--acier)" strokeWidth={1.5} />
+                Produits Sûrs et Certifiés
+              </h3>
+              <p style={{ fontSize: '0.85rem', color: 'var(--brume)', lineHeight: 1.8 }}>
+                La chimie que nous utilisons est conçue spécifiquement pour l&apos;ameublement. Elle détruit les liaisons protéiniques des taches tout en préservant l&apos;intégrité et la douceur des fibres. Sans danger pour les enfants et les animaux après séchage.
+              </p>
+            </motion.div>
           </div>
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link to="/reservation" className="btn-primary">
@@ -240,7 +211,11 @@ export default function Procede() {
             </Link>
           </div>
         </div>
-        <style>{`.machines-grid { @media (max-width: 640px) { grid-template-columns: 1fr !important; } }`}</style>
+        <style>{`
+          @media (max-width: 640px) {
+            .guarantee-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
       </section>
     </>
   )
